@@ -1,0 +1,92 @@
+a {
+  text-decoration: none;
+}
+
+code {
+  background-color: var(--mu-colors-background-surface-brand-subdued);
+}
+
+.card {
+  position: relative;
+}
+
+.overlay-icons, .overlay-buttons {
+  position: absolute;
+  top: 10px; /* Ajuste conforme necessário */
+}
+
+.overlay-icons {
+  left: 10px; /* Ajuste conforme necessário */
+}
+
+.overlay-buttons {
+  right: 10px; /* Ajuste conforme necessário */
+}
+
+
+.font-upload{
+  display: flex !important;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.modal-responsivo {
+  width: 90%; 
+  max-width: 500px; 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; 
+  background-color: white; 
+  padding: 20px; 
+  z-index: 1050; 
+  
+}
+
+.slide-banner-header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.cont-banners{
+  background: whitesmoke;
+  border: 2px solid #e9ecef;
+}
+
+.icon-hero{
+  
+  height: 20px;
+  width: 20px;
+}
+
+.modal-body{
+  min-height: 200px;
+}
+
+@media (min-width: 576px) {
+  .modal-responsivo {
+    width: 80%; /* Ajusta para uma largura um pouco menor em telas médias */
+  }
+}
+
+@media (min-width: 768px) {
+  .modal-responsivo {
+    width: 70%; /* Ajusta para uma largura um pouco menor em telas grandes */
+  }
+}
+
+@media (min-width: 992px) {
+  .modal-responsivo {
+    width: 60%; /* Ajusta para uma largura um pouco menor em telas grandes */
+    max-width: 800px; /* Permite que o modal seja um pouco maior em telas muito grandes */
+  }
+}
+
+@media (min-width: 1200px) {
+  .modal-responsivo {
+    width: 50%; /* Ajusta para uma largura menor ainda em telas extra grandes */
+    max-width: 1000px; /* Aumenta o máximo para telas realmente grandes */
+  }
+}
