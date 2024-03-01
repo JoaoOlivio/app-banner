@@ -7,8 +7,6 @@ COPY package*.json ./
 # Nota: Adicione ou remova comandos COPY conforme necessário para o seu projeto
 COPY . .
 
-CMD ["npm", "run", "dev"]
-
 # Metadado
 LABEL org.opencontainers.image.title="app-banner"                                  \
       org.opencontainers.image.description="Descrição do projeto app-banner."      \
@@ -16,3 +14,4 @@ LABEL org.opencontainers.image.title="app-banner"                               
       org.opencontainers.image.source="https://github.com/JoaoOlivio/app-banner"   \
       org.opencontainers.image.authors="T-sync <dev@tsync.com.br>"
 
+CMD ["npm", "run", "dev"]
