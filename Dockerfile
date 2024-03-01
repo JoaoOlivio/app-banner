@@ -12,7 +12,7 @@ RUN pnpm install
 
 COPY . .
 
-CMD ["pnpm", "run", "dev"]
+CMD ["npm", "run", "dev"]
 
 LABEL org.opencontainers.image.title="app-banner"                                  \
       org.opencontainers.image.description="Descrição do projeto app-banner."      \
