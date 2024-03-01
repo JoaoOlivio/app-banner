@@ -49,3 +49,6 @@ generated/
 .sentryclirc
 
 .env
+
+#Firebase 
+config.js
