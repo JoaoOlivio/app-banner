@@ -7,12 +7,6 @@ COPY package*.json ./
 # Nota: Adicione ou remova comandos COPY conforme necessário para o seu projeto
 COPY . .
 
-RUN npm run build
-
-FROM node:18-alpine
-WORKDIR /app
-COPY --from=builder /app/build/ /app/
-
 # Metadado
 LABEL org.opencontainers.image.title="app-banner"                                  \
       org.opencontainers.image.description="Descrição do projeto app-banner."      \
