@@ -1,9 +1,11 @@
 <div align="center">
-<img width="150" alt="saleor-app-template" src="https://user-images.githubusercontent.com/4006792/215185065-4ef2eda4-ca71-48cc-b14b-c776e0b491b6.png">
+<!-- <img width="150" alt="saleor-app-template" src="https://user-images.githubusercontent.com/4006792/215185065-4ef2eda4-ca71-48cc-b14b-c776e0b491b6.png"> -->
+<img width="150" alt="saleor-app-template" src="https://tsync.com.br/LogoBanner.png">
+
 </div>
 
 <div align="center">
-  <h1>Saleor App Template</h1>
+  <h1>Banner App - Saleor Template</h1>
 </div>
 
 <div align="center">
