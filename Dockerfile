@@ -9,8 +9,6 @@ COPY . .
 
 RUN npm run build
 
-WORKDIR /app
-
 COPY --from=builder /app/build/ /app/
 
 # Metadado
