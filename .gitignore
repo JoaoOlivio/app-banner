@@ -50,5 +50,5 @@ generated/
 
 .env
 
-#Firebase 
-config.js
+#Firebase OFF
+./src/config/config.js
