@@ -5130,7 +5130,7 @@
   .card-img,
   .card-img-bottom,
   .card-img-top {
-    width: 100%
+    width: 100%;
   }
   
   .card-img,
@@ -5138,7 +5138,9 @@
     border-top-left-radius: var(--bs-card-inner-border-radius);
     border-top-right-radius: var(--bs-card-inner-border-radius)
   }
+
   
+   
   .card-img,
   .card-img-bottom {
     border-bottom-right-radius: var(--bs-card-inner-border-radius);

@@ -205,7 +205,7 @@ const IndexPage: NextPage = () => {
     setIsModalOpen(true); // Abre o modal
   };
 
-  
+
   const handleSave = async () => {
     // Verifica se currentBanner é válido
     if (currentBanner && currentBanner.id) {
@@ -291,7 +291,7 @@ const IndexPage: NextPage = () => {
               </div>
               <hr />
               <div className="modal-body mt-2">
-                <button type="button" className="btn btn-dark me-2" onClick={handleButtonClick} disabled={uploading}>
+                <button type="button" className="btn btn-primary me-2" onClick={handleButtonClick} disabled={uploading}>
                   Escolha os arquivos
                 </button>
 
@@ -361,50 +361,55 @@ const IndexPage: NextPage = () => {
                 {/* Formulário de edição */}
                 <form onSubmit={e => e.preventDefault()}>
                   {/* Aqui você pode adicionar mais campos de entrada conforme necessário */}
-                  <div className="mb-3">
-                    <label htmlFor="externalLink" className="form-label">Link Externo</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="externalLink"
-                      value={currentBanner?.link || ''} // Garanta que 'link' está correto conforme a estrutura do seu objeto
-                      onChange={(e) => setCurrentBanner({ ...currentBanner, link: e.target.value })}
-                    />
+                  <label htmlFor="externalLink" className="form-label">Link Externo</label>
 
-                  </div>
-
-                  <div className="mb-3">
-                    {/* Selecione se é uma imagem ou texto */}
-                    <div className="btn-group" role="group" aria-label="Tipo de slide">
+                  <div className="slide-form">
+                    <div className="mb-3" style={{width: '90%', paddingRight: '10px'}}>
                       <input
-                        type="checkbox"
-                        className="btn-check"
-                        name="slideType"
-                        id="mobile"
-                        autoComplete="off"
-                        checked={currentBanner?.mobile}
-                        onChange={(e) => setCurrentBanner({ ...currentBanner, mobile: e.target.checked })}
+                        type="text"
+                        className="form-control"
+                        id="externalLink"
+                        value={currentBanner?.link || ''} // Garanta que 'link' está correto conforme a estrutura do seu objeto
+                        onChange={(e) => setCurrentBanner({ ...currentBanner, link: e.target.value })}
                       />
-                      <label className="btn btn-outline-primary" htmlFor="mobile"><DeviceTabletIcon className="icon-hero" /></label>
 
-                      <input
-                        type="checkbox"
-                        className="btn-check"
-                        name="slideType"
-                        id="pc"
-                        autoComplete="off"
-                        checked={currentBanner?.pc}
-                        onChange={(e) => setCurrentBanner({ ...currentBanner, pc: e.target.checked })}
-                      />
-                      <label className="btn btn-outline-primary" htmlFor="pc"><ComputerDesktopIcon className="icon-hero" /></label>
                     </div>
+
+                    <div className="mb-3">
+                      {/* Selecione se é uma imagem ou texto */}
+                      <div className="btn-group" role="group" aria-label="Tipo de slide">
+                        <input
+                          type="checkbox"
+                          className="btn-check"
+                          name="slideType"
+                          id="mobile"
+                          autoComplete="off"
+                          checked={currentBanner?.mobile}
+                          onChange={(e) => setCurrentBanner({ ...currentBanner, mobile: e.target.checked })}
+                        />
+                        <label className="btn btn-outline-primary" htmlFor="mobile"><DeviceTabletIcon className="icon-hero" /></label>
+
+                        <input
+                          type="checkbox"
+                          className="btn-check"
+                          name="slideType"
+                          id="pc"
+                          autoComplete="off"
+                          checked={currentBanner?.pc}
+                          onChange={(e) => setCurrentBanner({ ...currentBanner, pc: e.target.checked })}
+                        />
+                        <label className="btn btn-outline-primary" htmlFor="pc"><ComputerDesktopIcon className="icon-hero" /></label>
+                      </div>
+                    </div>
+
                   </div>
-
-
                   {/* Visualização do slide */}
-                  <div className="card">
-                    {/* Substitua por uma imagem dinâmica ou componente de texto conforme necessário */}
-                    <img src={currentBanner?.image} className="card-img-top" alt="Slide Preview" />
+                  <div className="card ">
+                    <div className="card-banners border border-top-0 text-center rounded-bottom p-3">
+                      {/* Substitua por uma imagem dinâmica ou componente de texto conforme necessário */}
+                      <img src={currentBanner?.image} className="h-100 object-fit-contain rounded" alt="Slide Preview" />
+                    </div>
+
                   </div>
 
                   {/* Botões de ação */}

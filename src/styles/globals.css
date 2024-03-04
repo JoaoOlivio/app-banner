@@ -45,6 +45,17 @@ code {
   
 }
 
+.card-banners {
+  height: 350px;
+  display: flex;
+  justify-content: center;
+}
+
+.slide-form{
+  display: flex;
+  align-items: center;
+}
+
 .slide-banner-header{
   display: flex;
   justify-content: space-between;
